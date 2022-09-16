@@ -1,0 +1,120 @@
+.modelInfoWrapper {
+  height: 100vh;
+  width: 100%;
+  background: #0e0e0e77;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+}
+.modelInfoWrapper .actualModel {
+  width: 520px;
+  min-height: fit-content;
+  background: var(--cardbg);
+  /*background: var(--browsebg);*/
+  border: 1px solid var(--cardborder);
+  padding: 15px 15px;
+  border-radius: 5px;
+  z-index: 9999999;
+  box-shadow: var(--shadow);
+  animation: model 3.5s ease-in-out 1;
+}
+@keyframes model {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.actualModel .modelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--cardborder);
+}
+.modelHeader .modelTitle {
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--headingcolor);
+  max-width: 90%;
+}
+.modelHeader .cross {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--browsebg);
+  cursor: pointer;
+}
+.modelHeader .cross:active {
+  transform: scale(0.9);
+}
+.modelHeader i {
+  color: var(--lightcolor);
+  font-size: 20px;
+}
+
+.actualModel .modelMessage {
+  font-size: 15px;
+  padding: 10px 0;
+  color: var(--headingcolor);
+  max-width: 90%;
+}
+.actualModel .buttonGrpModel {
+  padding: 20px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonGrpModel button {
+  padding: 7px 25px;
+  border-radius: 5px;
+  background: var(--button);
+  color: var(--btntext);
+  cursor: pointer;
+}
+.buttonGrpModel .btn2 {
+  background: transparent;
+  color: var(--button);
+  padding: 7px 20px;
+  margin-right: 10px;
+}
+.buttonGrpModel .btn2:hover {
+  background: var(--browsebg);
+}
+.buttonGrpModel :not(.btn2):focus {
+  transform: scale(0.93);
+}
+@media screen and (max-width: 768px) {
+  .modelInfoWrapper {
+    padding: 0 15px;
+  }
+  .modelHeader .modelTitle {
+    font-size: 20px;
+  }
+  .actualModel .modelMessage {
+    max-width: 95%;
+  }
+}
+.buttonGrpModel small {
+  color: var(--lightcolor);
+}
+@media screen and (max-width: 390px) {
+  .buttonGrpModel small {
+    color: var(--lightcolor);
+    font-size: 13px;
+  }
+  .buttonGrpModel button {
+    padding: 7px 12px;
+  }
+}

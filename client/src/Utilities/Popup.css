@@ -1,0 +1,39 @@
+.icon_popup {
+  width: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 18px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+.actualIcons {
+  height: 60px;
+  width: 60px;
+  /*box-shadow: 0 50px 40px rgba(0, 0, 0, 0.103);*/
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background: var(--button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000000;
+  overflow: hidden;
+  animation: ballanim 1.5s alternate-reverse infinite;
+}
+@keyframes ballanim {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.fa-adjust {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .icon_popup {
+    bottom: 60px;
+  }
+}

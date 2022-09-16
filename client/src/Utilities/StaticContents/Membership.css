@@ -1,0 +1,71 @@
+.mebbCont {
+  width: 85%;
+  margin: 20px auto;
+}
+.mebbCont .mbmHeading {
+  font-size: var(--headingsize);
+  font-family: var(--headingfamily);
+  color: var(--headingcolor);
+}
+.mebbCont .memCardCon {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.memCardCon .memcard {
+  min-height: auto;
+  width: 325px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--cardborder);
+  padding: 15px;
+  background: var(--cardbg);
+  margin: 10px 25px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.memcard:hover {
+  background: var(--browsebg);
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+.memcard .memDesc {
+  color: var(--headingcolor);
+  font-size: 15px;
+  text-align: center;
+}
+.memcard .memName {
+  font-size: 20px;
+  color: var(--headingcolor);
+  padding: 10px 0;
+}
+.memcard img {
+  height: 50px;
+  width: 50px;
+  transition: 0.5s ease-in-out;
+}
+.memcard:hover img {
+  transform: translateY(-10px);
+}
+.memcard .buttonGrp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.memcard .buttonGrp .button {
+  flex: 1;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .memCardCon .memcard {
+    width: 100%;
+  }
+  .mebbCont .memCardCon {
+    justify-content: center;
+  }
+}

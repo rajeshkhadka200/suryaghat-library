@@ -1,0 +1,73 @@
+/*glbal*/
+.colums .heading {
+  font-size: 23px;
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif !important;
+  color: var(--headingcolor);
+}
+
+/*main container of section holder */
+.homeThird {
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* end main container of section holder */
+/*card img holder */
+.home3_card {
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.homecardDisc {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.homecardDisc .title {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif !important;
+  text-transform: capitalize;
+  color: var(--headingcolor);
+}
+.homecardDisc .Author,
+.type {
+  text-transform: capitalize;
+  font-size: 13px;
+  color: var(--lightcolor);
+}
+.type {
+  margin-top: 33px;
+}
+.col_type {
+  color: var(--headingcolor);
+}
+.home3_card:hover .col_type {
+  color: var(--button);
+}
+
+.card_img_holder {
+  height: 100px;
+  width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.card_img_holder img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: contain;
+}
+
+/*-ends---------card img holder--------- */
+@media (max-width: 768px) {
+  .homeThird {
+    flex-direction: column !important;
+    width: 90%;
+    justify-content: space-between;
+  }
+}

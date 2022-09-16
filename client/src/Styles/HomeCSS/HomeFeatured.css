@@ -1,0 +1,79 @@
+.holderFeatured {
+  width: 90%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+.fTitle {
+  font-size: var(--headingsize);
+  font-family: var(--headingfamily);
+  color: var(--headingcolor);
+}
+.cardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.fCard {
+  margin: 20px 20px;
+  display: flex;
+  width: 250px;
+  padding: 20px;
+  background: var(--cardbg);
+  box-shadow: var(--fshadow);
+  border-radius: 5px;
+}
+
+.fDesc .cTitle {
+  font-size: 18px;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+  color: var(--headingcolor);
+}
+.fDesc p {
+  font-size: 14px;
+  color: var(--headingcolor);
+  padding: 10px 0;
+}
+.fcButton {
+  padding: 7px 14px;
+  border-radius: 5px;
+  color: var(--btntext);
+  font-size: 12px;
+  background-color: var(--button);
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .holderFeatured {
+    width: 100%;
+    padding: 24px 0;
+  }
+  .fCard {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 20px 20px;
+  }
+  .fImg {
+    text-align: center !important;
+  }
+  .fImg .fas {
+    padding-bottom: 5px;
+  }
+  .fcButton {
+    width: 100%;
+    text-align: center;
+  }
+  .fTitle {
+    padding-left: 30px;
+  }
+  .cardHolder {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .fCard {
+    width: 100% !important;
+    color: rgba(240, 233, 233, 0.13);
+  }
+}

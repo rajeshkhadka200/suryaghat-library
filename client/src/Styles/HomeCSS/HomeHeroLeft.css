@@ -1,0 +1,77 @@
+.left_side {
+  flex-basis: 50%;
+}
+
+.left_side .tittle {
+  font-weight: 700;
+  font-size: 70px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  color: var(--headingcolor);
+  cursor: pointer;
+}
+
+.left_side .hero_disc {
+  padding: 15px 0;
+  font-size: 15px;
+  color: var(--headingcolor);
+}
+.fancyHero {
+  font-weight: 700;
+  font-family: var(--headingfamily);
+  font-size: 18px;
+  color: var(--button);
+}
+.btn_group > .btn {
+  outline: 0;
+  border: 0;
+  background-color: var(--button);
+  cursor: pointer;
+  padding: 7px 14px;
+  display: block;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 10px;
+}
+.leftbtn {
+  width: 100%;
+  color: var(--btntext);
+}
+/* ---------------Quotes styling---------------- */
+.fa-quote-left {
+  color: orange;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.fa-quote-right {
+  color: orange;
+  font-size: 20px;
+  margin-left: 5px;
+}
+@media (max-width: 768px) {
+  /*responsive for First section */
+
+  .left_side {
+    flex-basis: 100%;
+  }
+
+  .left_side .tittle {
+    font-size: 40px;
+  }
+}
+
+/*Extra small Devices*/
+@media (max-width: 500px) {
+  .btn_group button {
+    width: 100%;
+  }
+}
+
+/*Extra Large Devices*/
+@media (min-width: 1800px) {
+  .left_side {
+    flex-basis: 100%;
+  }
+}

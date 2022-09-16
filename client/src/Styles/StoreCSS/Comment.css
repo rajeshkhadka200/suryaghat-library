@@ -1,0 +1,129 @@
+.cmt_wrapper {
+  width: 90%;
+  margin: 20px auto;
+  padding-bottom: 30px;
+}
+.cmt_wrapper > p {
+  font-size: 22px;
+  font-family: var(--headingfamily);
+  padding: 10px 0;
+  color: var(--headingcolor);
+}
+.cmt_wrapper form,
+.cmt_wrapper .form {
+  width: 50%;
+  padding-bottom: 10px;
+  display: flex;
+}
+.cmt_wrapper form input,
+.cmt_wrapper .form input {
+  flex: 1;
+  padding: 5px 2px;
+  background: var(--cmtinput);
+  outline: none;
+  border: 1px solid var(--browsebg);
+  color: var(--headingcolor);
+}
+.cmt_wrapper form button,
+.cmt_wrapper .form button {
+  background: var(--button);
+  border-radius: 5px;
+  padding: 0 10px;
+  color: #fff;
+}
+.cmt_wrapper .singleComment {
+  width: 50%;
+  display: flex;
+  padding: 10px 0;
+  background: var(--cmt);
+  margin: 10px 0;
+  justify-content: space-between !important;
+}
+
+.lftrghthold {
+  width: 75%;
+  display: flex;
+  padding: 10px 0;
+  background: var(--cmt);
+  margin: 10px 0;
+}
+.singleComment .leftCmt {
+  flex-basis: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+.singleComment .leftCmt img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.rightCmt > p {
+  padding-bottom: 5px;
+  color: var(--headingcolor);
+}
+.rightCmt .actualcmt {
+  font-size: 13px;
+  width: 350px;
+  height: fit-content;
+  word-wrap: break-word;
+}
+.Cmtaction {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Cmtaction span:not(:first-child) {
+  margin-left: 10px;
+}
+.Cmtaction span {
+  color: var(--headingcolor);
+  margin-top: 5px;
+}
+.hrClass {
+  width: 50%;
+  color: var(--button);
+}
+
+@media screen and (max-width: 768px) {
+  .cmt_wrapper form,
+  .cmt_wrapper .form {
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+  }
+  .cmt_wrapper .singleComment {
+    width: 100%;
+  }
+  .singleComment .leftCmt img {
+    height: 35px;
+    width: 35px;
+  }
+  .rightCmt > p {
+    font-size: 15px;
+  }
+
+  .rightCmt .actualcmt {
+    font-size: 13px;
+    width: 200px;
+    height: fit-content;
+    word-wrap: break-word;
+  }
+  .hrClass {
+    width: 100%;
+    color: rgba(51, 51, 51, 0.445);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .rightCmt .actualcmt {
+    font-size: 13px;
+    width: 150px;
+    height: fit-content;
+    word-wrap: break-word;
+    padding: 0 5px 0 0;
+  }
+}

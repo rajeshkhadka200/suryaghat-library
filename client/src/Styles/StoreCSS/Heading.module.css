@@ -1,0 +1,39 @@
+.storeHeadings {
+  width: 90%;
+  margin: 20px auto;
+  background: var(--browsebg) !important;
+  border-radius: 10px;
+}
+
+.Headinglinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.heading {
+  margin-left: 60px;
+  margin-top: 50px;
+}
+.heading span {
+  color: var(--headingcolor);
+  font-family: var(--headingfamily) !important;
+  font-size: var(--headingsize) !important;
+}
+.Headinglinks {
+  overflow-x: scroll !important;
+}
+
+.Headinglinks::-webkit-scrollbar {
+  height: 5px;
+}
+.Headinglinks::-webkit-scrollbar-track {
+  background: var(--browsebg);
+}
+.Headinglinks::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .storeHeadings {
+    width: 95%;
+  }
+}

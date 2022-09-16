@@ -1,0 +1,63 @@
+.ShowDataholder {
+  width: 90%;
+  margin: 0px auto 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.smallIndi {
+  width: 84%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.error {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  margin: 50px auto;
+  color: var(--headingcolor);
+}
+
+.exceptWrapper {
+  width: 90%;
+  margin: 20px auto;
+}
+.holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  margin: 20px 0;
+  background: var(--browsebg);
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+.exceptWrapper span {
+  font-size: var(--headingsize);
+  font-family: var(--headingfamily);
+  text-transform: capitalize;
+  color: var(--headingcolor);
+}
+
+@media screen and (max-width: 869px) {
+  .holder {
+    justify-content: center;
+  }
+  .ShowDataholder {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 780px) {
+  .ShowDataholder {
+    width: 95%;
+  }
+}
+#exceptWrapper {
+  background: transparent !important;
+}

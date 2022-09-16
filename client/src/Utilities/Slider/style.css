@@ -1,0 +1,67 @@
+.carousel-wrapper {
+  background-color: var(--contentslide);
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 0 !important;
+  animation: wrapperAnim 2s ease-in-out 1;
+}
+
+.sliderImgHolder {
+  height: 200px;
+  margin: 10px 15px;
+  position: relative;
+}
+button.rec-dot {
+  background-color: var(--cardbg);
+}
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+.xzcEF{
+  margin-top: 0!important;
+  display: none!important;
+}
+.rec.rec-arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: var(--browsebg) !important;
+  color: var(--headingcolor) !important;
+  margin: 0 10px;
+}
+
+.sliderImgHolder img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .rec.rec-arrow {
+    display: none;
+  }
+}
+.dlt_wrapper_inner {
+  height: 100%;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.418);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.sliderImgHolder:hover .dlt_wrapper_inner {
+  visibility: visible;
+}
+center a {
+  color: rgba(255, 255, 255, 0.521);
+}

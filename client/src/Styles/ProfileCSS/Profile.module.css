@@ -1,0 +1,166 @@
+.profileHeader {
+  width: 80%;
+  margin: 20px auto;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+#contentID {
+  background: var(--cardbg) !important;
+  border: 1px solid var(--cardborder);
+  padding-left: 15px;
+}
+#otherID p {
+  color: var(--lightcolor);
+  background: var(--browsebg);
+}
+#grpID button {
+  background: var(--button);
+}
+#descID {
+  color: var(--headingcolor);
+}
+#detailsID #titleID {
+  color: var(--headingcolor);
+}
+#viewfiles {
+  color: var(--lightcolor);
+  font-size: 15px;
+}
+.profileHeader .profileLeft {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.profileLeft img {
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.profileHeader .profileRight {
+  width: 80%;
+  padding: 10px;
+}
+.profileRight .username span {
+  font-size: 30px;
+  text-transform: capitalize;
+  font-family: var(--headingfamily);
+  color: var(--headingcolor);
+}
+.username {
+  margin-bottom: 10px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+.details p {
+  line-height: 25px;
+  font-family: var(--headingfamily);
+  color: var(--headingcolor);
+}
+.btngrp {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.profileHeader .button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 20px;
+  color: #fff;
+  background: var(--button);
+  border-radius: 5px;
+}
+/*for my uploads  */
+.imgUpload {
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .profileHeader {
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .profileLeft img {
+    height: 100px;
+    width: 100px;
+  }
+  hr {
+    width: 100%;
+    margin: 0;
+  }
+  .profileHeader .profileLeft {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .profileHeader .profileRight {
+    width: 100%;
+    padding: 10px;
+  }
+  .btngrp {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .profileHeader .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+.Skeleton {
+  margin-top: 50px;
+  width: 900px;
+  height: 100px;
+}
+.styleTable {
+  background: #333 !important;
+}
+.row span {
+  font-family: "poppins", sans-serif;
+}
+.row button {
+  padding: 7px 14px;
+  color: #fff;
+  background: var(--button);
+  border-radius: 5px;
+}
+.tableWrapper {
+  margin-top: 100px !important;
+}
+.errorNoupload {
+  color: var(--headingcolor);
+  font-family: var(--headingfamily);
+  font-size: var(--headingsize);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.errorNoupload small {
+  font-size: 15px;
+  padding: 5px 0;
+}
+.errorNoupload i {
+  padding-top: 10px;
+  color: var(--lightcolor);
+  animation: animicons 1s alternate-reverse infinite;
+}
+
+@keyframes animicons {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}

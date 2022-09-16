@@ -1,0 +1,114 @@
+.cardContaner {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  padding: 0px 0 0px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.actualCard {
+  margin: 20px auto;
+  width: 280px;
+  height: 250px;
+  display: flex;
+  padding: 12px;
+  border: 1px solid var(--cardborder);
+  border-radius: 5px;
+  animation: loadmore 0.5s ease-in-out 1;
+  background: var(--cardbg);
+  transition: 0.3s ease-out;
+}
+.actualCard:hover {
+  background: var(--browsebg);
+  cursor: pointer;
+  transform: translateY(-8px);
+}
+
+.leftPart {
+  padding-right: 10px;
+  display: flex;
+
+  justify-content: center;
+}
+.leftPart img {
+  width: 130px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.title {
+  padding-bottom: 5px;
+  text-transform: capitalize;
+  font-size: 15px;
+  color: var(--headingcolor);
+}
+.authorName {
+  color: var(--lightcolor);
+  font-size: 10px;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+.rate {
+  padding-bottom: 5px;
+}
+.desc {
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: var(--headingcolor);
+}
+.linkRate {
+  font-size: 12px;
+  color: var(--headingcolor);
+}
+.actualCard:hover .linkRate {
+  color: var(--button);
+}
+
+.buttonsGrp {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.buttonsGrp span {
+  color: royalblue;
+  cursor: pointer;
+}
+
+.heading {
+  margin-left: 60px;
+  margin-top: 50px;
+}
+.heading span {
+  font-family: var(--headingfamily) !important;
+  font-size: var(--headingsize);
+  color: var(--headingcolor);
+}
+@keyframes loadmore {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .cardContaner {
+    justify-content: flex-start !important;
+  }
+  .actualCard {
+    width: 500px;
+    height: 250px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .actualCard {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,61 @@
+.HomesmallData {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  flex-wrap: wrap;
+}
+.smallCard {
+  min-width: 308px;
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  align-items: center;
+  margin: 10px 10px;
+  justify-content: space-between;
+}
+/*.smallCardDesc {
+  padding-right: 50px;
+}*/
+.smallCard .smallTittle {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.smallCard .fas,
+.far {
+  margin-top: 5px;
+}
+.smallCardDesc .smallTittle {
+  font-size: 13px;
+  color: var(--smalltext);
+}
+.smallCardDesc .small {
+  font-size: 13px;
+  color: var(--smalltext);
+}
+
+.iconSmall {
+  color: var(--button);
+}
+
+.firstCol {
+  background-color: var(--smallfirst);
+  /* background-color: #e4f8f2; */
+}
+
+.secCol {
+  background-color: var(--smallsec);
+}
+.thirdCol {
+  background-color: var(--smallthrd);
+}
+@media (max-width: 768px) {
+  .HomesmallData {
+    justify-content: center;
+    width: 90%;
+  }
+  .smallCard {
+    width: 100%;
+  }
+}

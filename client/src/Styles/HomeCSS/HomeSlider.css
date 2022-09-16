@@ -1,0 +1,136 @@
+.mainContainer {
+  width: 90%;
+  display: flex;
+  max-height: 400px !important;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.swiper-container {
+  width: 100%;
+  position: relative;
+}
+
+.sliderWrapper {
+  width: 100% !important;
+  /* height: 100%; */
+}
+
+.swiper-slide img {
+  /* display: block; */
+  width: 80%;
+  max-height: 400px;
+  object-fit: cover;
+  background-color: var(--browsebg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sliderText {
+  position: absolute;
+  height: 400px;
+  width: 21%;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #242526;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  right: 118px;
+  width: auto !important;
+  left: auto !important;
+  margin: 0;
+}
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.sliderHeading {
+  font-family: var(--headingfamily);
+  font-size: 22px;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.863);
+  text-align: left !important;
+}
+.sliderdesc {
+  color: rgba(255, 255, 255, 0.473);
+  font-size: 15px;
+  margin: 10px 0;
+  /*font-family: var(--headingfamily);*/
+}
+
+@media screen and (max-width: 1200px) {
+  .sliderWrapper {
+    width: 100% !important;
+    height: 50vh !important;
+    margin: 0 auto;
+  }
+  .mainContainer {
+    flex-direction: column;
+    margin: 0px auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  .sliderWrapper {
+    width: 100% !important;
+    height: 50vh !important;
+    margin: 0 auto;
+  }
+  .swiper-container {
+    height: 300px;
+  }
+  .sliderText {
+    display: none;
+  }
+  .swiper-slide img {
+    width: 100% !important;
+  }
+  .swiper-pagination {
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    width: 100% !important;
+    height: 320px !important;
+  }
+  #links_app {
+    display: none !important;
+  }
+
+  .sliderLogin .loginHeading span {
+    font-weight: 500;
+  }
+  .loginInfo {
+    width: 100%;
+    padding: 10px 30px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .LoginGoogle {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  .mainContainer {
+    flex-direction: column;
+  }
+}

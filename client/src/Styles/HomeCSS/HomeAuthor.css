@@ -1,0 +1,60 @@
+.topCategories {
+  /* padding: 50px 100px 50px 100px; */
+  width: 90%;
+  margin: 50px auto;
+}
+.topCategories .heading {
+  font-size: 23px;
+  font-family: "Montserrat", sans-serif !important;
+  color: var(--headingcolor);
+}
+.topcllectioncardImg {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  border-radius: 50%;
+}
+/* styling the scroll bar  */
+
+.topcllectioncardImg img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.topHolder {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  transition: 0.5s;
+}
+
+.cardtopCollection {
+  margin: 0 30px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.topllectionTitle {
+  margin-top: 5px;
+  text-transform: capitalize;
+  font-size: 13px;
+  color: var(--lightcolor);
+  font-family: "Montserrat", sans-serif !important;
+}
+
+@media screen and (max-width: 768px) {
+  .topCategories {
+    width: 95%;
+  }
+  .topHolder {
+    justify-content: left;
+  }
+  .cardtopCollection {
+    margin: 10px 8px;
+  }
+}

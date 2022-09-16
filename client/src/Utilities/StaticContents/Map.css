@@ -1,0 +1,12 @@
+.mapContainer {
+  width: 85%;
+  margin: 30px auto;
+  height: auto;
+}
+.mapContainer .mapHeading {
+  width: 100%;
+  font-size: 24px;
+  font-family: var(--headingfamily);
+  color: var(--headingcolor);
+  padding: 20px 0;
+}

@@ -1,0 +1,50 @@
+.loginWrapper {
+  height: calc(100vh - 50px);
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBox {
+  height: fit-content;
+  width: 350px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid var(--cardborder);
+  flex-direction: column;
+  background-color: var(--browsebg);
+}
+.loginBox span {
+  font-size: 35px;
+  font-family: var(--headingfamily);
+  color: var(--headingcolor);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.loginBox img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 20px 0;
+  object-fit: cover;
+}
+.loginBox button {
+  background: var(--button);
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  color: var(--btntext);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .LoginLeft {
+    display: none;
+  }
+  .loginWrapper {
+    min-height: 80vh;
+    width: 100%;
+  }
+}

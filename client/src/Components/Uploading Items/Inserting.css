@@ -1,0 +1,137 @@
+.formWrapper {
+  width: 60%;
+  margin: 50px auto;
+  background: var(--cardbg);
+  box-shadow: var(--uploadch);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: poppins, "sans-serif";
+  /*border: 1px solid var(--cardborder);*/
+}
+.formWrapper .uploadHeader {
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--cardborder);
+  margin-bottom: 30px;
+}
+.uploadHeader p {
+  font-size: 24px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  color: var(--headingcolor);
+}
+
+.formWrapper .uploadFormControl {
+  display: flex;
+  margin: 10px 0;
+}
+.uploadFormControl .uploadIndividual {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.uploadIndividual:nth-child(odd) {
+  margin-right: 10px;
+}
+#textarea {
+  margin-right: 0px !important;
+}
+
+.uploadIndividual label {
+  padding-bottom: 5px;
+  font-weight: 300;
+  color: var(--lightcolor);
+}
+.uploadIndividual select,
+.uploadIndividual textarea {
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid var(--cardborder);
+  background: var(--cmtinput);
+  color: var(--lightcolor);
+}
+
+.uploadIndividual input::placeholder,
+.uploadIndividual textarea::placeholder {
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  color: var(--lightcolor);
+}
+.uploadFormControl .uploadIndividual select option {
+  background: var(--cardbg);
+}
+
+.uploadIndividual input {
+  border-radius: 10px;
+  padding: 8px;
+  outline: 0;
+  border: 1px solid var(--cardborder);
+  background: var(--cmtinput);
+  color: var(--headingcolor);
+}
+.uploadIndividual input:focus {
+  border: 1px solid var(--cardborder);
+}
+
+.uploadFormControl .uploadIndividual textarea {
+  resize: none;
+  height: 150px;
+}
+::-webkit-file-upload-button {
+  padding: 5px 20px;
+  background: var(--button);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: #fff;
+}
+.btnGrp_upload {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.btnGrp_upload button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+  border: 0;
+  background: #2d88ff;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.btnGrp_upload button:nth-child(2) {
+  margin-left: 10px;
+}
+@media screen and (max-width: 1040px) {
+  .formWrapper {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .formWrapper {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .formWrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .formWrapper {
+    width: 95%;
+  }
+  .formWrapper .uploadFormControl {
+    flex-direction: column;
+  }
+  .uploadFormControl .uploadIndividual {
+    margin-top: 10px;
+  }
+  .uploadIndividual:nth-child(odd) {
+    margin-right: 0px;
+  }
+}

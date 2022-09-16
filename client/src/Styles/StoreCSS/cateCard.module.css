@@ -1,0 +1,44 @@
+.mainCateCard {
+  width: 150px;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.StorecateCard {
+  background: #fff;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  color: #000000;
+  transition: 0.5s ease-in-out;
+}
+
+.action {
+  margin-top: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--headingcolor);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .StorecateCard {
+    height: 90px;
+    width: 90px;
+  }
+}
+.StorecateCard:hover {
+  transform: scale(1.13);
+}
+
+.StorecateCard:hover ~ .action {
+  transform: translateY(10px);
+  color: var(--button);
+}

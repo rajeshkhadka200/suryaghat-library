@@ -1,0 +1,113 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  /*padding-top: 20px;*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 110vh;
+  overflow-x: scroll;
+  background-color: rgba(0, 0, 0, 0.678);
+  overflow-y: auto;
+}
+#myModal p {
+  padding-bottom: 5px;
+}
+.mainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal_content {
+  border-radius: 5px;
+  box-shadow: var(--shadow) !important;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  height: fit-content;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.formControl {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 30px;
+}
+.formControl div {
+  margin-right: 10px;
+}
+.inputTextField {
+  width: 300px !important;
+}
+@media screen and (max-width: 1354px) {
+  .modal_content {
+    width: 80%;
+    height: 80%;
+    overflow-y: scroll;
+    margin-top: 60px;
+  }
+
+  .formControl {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .inputTextField {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .formControl div {
+    margin-right: 0px;
+  }
+  .formControl {
+    width: 100%;
+    flex-direction: column;
+    margin: 10px 0px;
+  }
+  .modal_content {
+    width: 95%;
+    height: 75%;
+    overflow-y: scroll;
+  }
+  .inputTextField {
+    width: 100% !important;
+  }
+}
+
+.heading {
+  font-family: var(--headingfamily);
+  font-size: 20px;
+  font-weight: 500;
+}
+/*style */
+.btnGrp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.btnGrp button {
+  padding: 10px 20px;
+  background: var(--seeallcolor);
+  color: #fff;
+}

@@ -1,0 +1,20 @@
+.hero_content {
+  /*padding: 70px 100px 70px 100px;*/
+  width: 85%;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 153px;
+  border-bottom-right-radius: 153px;
+}
+@media (max-width: 768px) {
+  /*responsive for First section */
+  .hero_content {
+    width: 100%;
+    border-radius: 0;
+    width: 90%;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+}

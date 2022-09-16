@@ -1,0 +1,14 @@
+.loder {
+  height: calc(100vh - 6rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loder p {
+  font-family: var(--headingfamily);
+  font-size: 100px;
+  color: var(--lightcolor);
+  -webkit-user-drag: none;
+}

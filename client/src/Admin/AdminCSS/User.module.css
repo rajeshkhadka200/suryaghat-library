@@ -1,0 +1,90 @@
+.Userheading {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px 0;
+}
+.Userheading p {
+  font-family: var(--headingfamily);
+  font-size: 25px;
+  margin-top: 50px;
+}
+.userWrapper {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#idsU {
+  margin: 80px auto;
+  justify-content: center;
+  width: 100%;
+  /*background: #f5f3f5 !important;*/
+}
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 220px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 13px 13px;
+}
+.userCard img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  border: 2px solid var(--seeallcolor);
+}
+
+.userCard span {
+  padding: 5px 0;
+}
+.userCard .buttonGroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.buttonGroup button {
+  flex: 1;
+  color: #fff;
+  background: var(--seeallcolor);
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.copyCon {
+  width: 80%;
+  margin: 30px auto;
+  height: fit-content;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+}
+.copyCon > p {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-family: var(--headingfamily);
+}
+.copyCon li {
+  margin: 5px 0;
+}
+.ContentOneCSS {
+  margin-top: 80px;
+}
+@media screen and (max-width: 768px) {
+  .userWrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .userCard {
+    width: 100%;
+  }
+}

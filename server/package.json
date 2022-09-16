@@ -1,0 +1,35 @@
+{
+  "name": "haribaba.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd ../client && npm run start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "client:build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZIR3A/haribaba.github.io.git"
+  },
+  "author": "###HACKER##",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZIR3A/haribaba.github.io/issues"
+  },
+  "homepage": "https://github.com/ZIR3A/haribaba.github.io#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "encrypt-with-password": "^1.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "google-auth-library": "^7.3.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.9"
+  }
+}

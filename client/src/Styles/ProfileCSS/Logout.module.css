@@ -1,0 +1,17 @@
+.logoutBtn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 20px;
+  color: #fff;
+  background: var(--button);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .logoutBtn {
+    width: 100%;
+  }
+}
