@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import axios from "axios";
+
 import "react-toastify/dist/ReactToastify.css";
 import "../Components/Uploading Items/Inserting.css";
 import { ContexStore } from "../ContexStore/ContexStore";
@@ -11,6 +11,7 @@ import MainLoder from "../Utilities/StaticContents/MainLoader";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { serverBaseURI } from "../Utilities/file.config";
+import { getApi } from "../services";
 const EditDetails = () => {
   const history = useHistory();
   const { userData } = useContext(ContexStore);
@@ -21,7 +22,7 @@ const EditDetails = () => {
   const [redirect, setRedirect] = useState(false);
   useEffect(() => {
     const loadData = async () => {
-      axios
+      getApi
         .post("/hariBaba/api/edit", {
           editId,
           google_id,
@@ -68,7 +69,7 @@ const EditDetails = () => {
     document.querySelector("body").classList.add("hide");
     setloading(true);
     e.preventDefault();
-    await axios
+    await getApi
       .post("/hariBaba/api/editall", {
         pro_id,
         pro_title,

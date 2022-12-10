@@ -1,13 +1,14 @@
 import React, { useContext, useEffect } from "react";
-import axios from "axios";
+
 import { NavLink } from "react-router-dom";
 import { ContexStore } from "../../ContexStore/ContexStore";
+import { getApi } from "../../services";
 import { serverBaseURI } from "../../Utilities/file.config";
 const HomeThirdCol2 = () => {
   const { newRelease, setnewRelease } = useContext(ContexStore);
   useEffect(() => {
     const loadData = async () => {
-      await axios
+      await getApi
         .get("/hariBaba/api/product")
         .then((res) => setnewRelease(res.data));
     };

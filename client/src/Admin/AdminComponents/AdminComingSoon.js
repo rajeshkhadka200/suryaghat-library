@@ -1,5 +1,6 @@
-import axios from "axios";
+
 import React, { useState } from "react";
+import { getApi } from "../../services";
 
 const AdminComingSoon = () => {
   //Upload the Image to the database
@@ -17,7 +18,7 @@ const AdminComingSoon = () => {
     const formData = new FormData();
     formData.append("file", imgHolder);
 
-    await axios
+    await getApi
       .post("/hariBaba/api/comingImg", formData, {
         headers: {
           "content-Type": "multipart/form-data",

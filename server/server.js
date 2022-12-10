@@ -1,19 +1,19 @@
 // Import dependencies
-const db = require("./DataBase/DbConnection");
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 const express = require("express");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const path = require("path");
 require("dotenv").config();
 const app = express();
+// db();
 app.use(express.static("../client/public"));
-app.use(
-  "/hariBaba/api/uploads",
-  express.static(path.join(__dirname, "assets"))
-);
-// src = {`${serverBaseURI}/hariBaba/api/uploads/upload/${pro_img1}`}
+// app.use(
+//   "/hariBaba/api/uploads",
+//   express.static(path.join(__dirname, "assets"))
+// );
 
+app.use("/hariBaba/api/uploads", express.static("assets"));
 const port = process.env.PORT || 3001; //set port
 app.use(cors()); //cors is used to access the data sent from frontend in backend :)
 app.use(express.json({ extented: false }));
@@ -37,4 +37,4 @@ app.use("/hariBaba/api/", require("./Router/AdminRoute"));
 //multiple images
 app.use("/hariBaba/api/", require("./Router/ImageRouter"));
 
-app.listen(port, () => console.log(`BACK_END_SERVICE_PORT: ${port}`)); //listen port
+app.listen(port, () => console.log(`BACK_END_SERVICE_PORT: ${port}`)); //listen to the port

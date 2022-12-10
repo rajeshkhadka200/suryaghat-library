@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
+
 import Cookies from "js-cookie";
+import { getApi } from "../services";
 
 export const ContexStore = createContext();
 
@@ -12,7 +13,7 @@ const ContexStoreWrapper = ({ children }) => {
 
   useEffect(() => {
     if (authID) {
-      axios
+      getApi
         .post("/hariBaba/api/senduserData", {
           googleId: authID,
         })
@@ -31,7 +32,7 @@ const ContexStoreWrapper = ({ children }) => {
     getAllPro();
   }, []);
   const getAllPro = async () => {
-    await axios.get("/hariBaba/api/allitems").then((res) => {
+    await getApi.get("/hariBaba/api/allitems").then((res) => {
       setApidata(res.data);
     });
   };
@@ -40,7 +41,7 @@ const ContexStoreWrapper = ({ children }) => {
   const [alluser, setalluser] = useState([]);
   useEffect(() => {
     if (ad_ckk) {
-      axios.get("/hariBaba/api/getalluser").then((response) => {
+      getApi.get("/hariBaba/api/getalluser").then((response) => {
         setalluser(response.data);
       });
     }
@@ -49,7 +50,7 @@ const ContexStoreWrapper = ({ children }) => {
   const [admin, setAdmin] = useState([]);
   useEffect(() => {
     if (ad_ckk) {
-      axios
+      getApi
         .post("/hariBaba/api/admin/sendadmindata", {
           ad_ckk: ad_ckk,
         })
@@ -61,7 +62,7 @@ const ContexStoreWrapper = ({ children }) => {
 
   const [images, setImages] = useState([]);
   const fetchImages = async () => {
-    await axios
+    await getApi
       .get("/hariBaba/api/img/fetchmultipleimages")
       .then((responce) => {
         setImages(responce.data);
@@ -84,7 +85,7 @@ const ContexStoreWrapper = ({ children }) => {
   const [dataState, setdataState] = useState([]);
   useEffect(() => {
     const getAllSearchData = async () => {
-      await axios.get("/hariBaba/api/getAllsearchProduct").then((responce) => {
+      await getApi.get("/hariBaba/api/getAllsearchProduct").then((responce) => {
         setdataState(responce.data);
       });
     };

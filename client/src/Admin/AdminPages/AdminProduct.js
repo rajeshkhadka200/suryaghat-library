@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import productCSS from "../AdminCSS/AdminProduct.module.css";
 import AdminNav from "../AdminComponents/AdminNav";
-import axios from "axios";
+
 import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AdminSingleComp from "../AdminComponents/AdminSingleComp";
+import { getApi } from "../../services";
 const AdminProduct = () => {
   let history = useHistory();
   const isAdmin = Cookies.get("__tcphblad__");
@@ -16,7 +17,7 @@ const AdminProduct = () => {
   const [apiData, setapiData] = useState([]);
 
   useEffect(() => {
-    axios.get("/hariBaba/api/productadmin").then((response) => {
+    getApi.get("/hariBaba/api/productadmin").then((response) => {
       setapiData(response.data);
     });
   }, []);
@@ -105,16 +106,15 @@ const AdminProduct = () => {
           </span>
         </div>
         <div className={productCSS.inpWrapper}>
-           
-            <input
-              placeholder="Search goes here"
-              value={searchvalue}
-              onChange={(e) => {
-                setsearchvalue(e.target.value);
-              }}
-              type="text"
-            />
-            <button type="submit">Search</button>
+          <input
+            placeholder="Search goes here"
+            value={searchvalue}
+            onChange={(e) => {
+              setsearchvalue(e.target.value);
+            }}
+            type="text"
+          />
+          <button type="submit">Search</button>
         </div>
         <div className={productCSS.productWrapper}>
           {apiData

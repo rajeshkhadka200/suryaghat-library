@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import { ContexStore } from "../../ContexStore/ContexStore";
 import profileCSS from "../../Styles/ProfileCSS/Profile.module.css";
 import Cookies from "js-cookie";
-import axios from "axios";
+
 import ReactStars from "react-stars";
 import productCSS from "../../Admin/AdminCSS/AdminProduct.module.css";
 import { NavLink } from "react-router-dom";
 import { serverBaseURI } from "../../Utilities/file.config";
 import { useHistory } from "react-router-dom";
+import { getApi } from "../../services";
 
 const MyUploads = () => {
   const AuthId = Cookies.get("__tcphbl30__");
@@ -22,7 +23,7 @@ const MyUploads = () => {
 
   const handleDelete = async (id, src, pro_img1) => {
     if (window.confirm("Are you sure")) {
-      await axios
+      await getApi
         .post("/hariBaba/api/delete", {
           id,
           AuthId,

@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getApi } from "../../services";
 import { serverBaseURI } from "../../Utilities/file.config";
 import AdminNav from "../AdminComponents/AdminNav";
 import AdminSingleComp from "../AdminComponents/AdminSingleComp";
@@ -13,7 +13,7 @@ const RedirectNotif = () => {
     queryData();
   }, []);
   const queryData = () => {
-    axios
+    getApi
       .post("/hariBaba/api/allnotifproduct", {
         notiftitle,
       })

@@ -31,7 +31,7 @@ const imageUploader = async (req, res) => {
 };
 
 const fetchimageUploader = async (req, res) => {
-  await db.query("SELECT * from image", (err, result) => {
+  const a = db.query("SELECT * from image", (err, result) => {
     if (err) {
       throw err;
     } else {

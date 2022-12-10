@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import AdminLoginStyle from "../AdminCSS/AdminLogin.module.css";
-import axios from "axios";
 import Cookies from "js-cookie";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../../Utilities/StaticContents/Footer";
+import { getApi } from "../../services";
 
 const AdminLogin = () => {
   let history = useHistory();
@@ -28,7 +28,7 @@ const AdminLogin = () => {
 
   const SendData = (e) => {
     e.preventDefault();
-    axios
+    getApi
       .post("/hariBaba/api/admin/adminauth", {
         email,
         password,

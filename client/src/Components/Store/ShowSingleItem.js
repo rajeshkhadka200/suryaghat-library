@@ -3,8 +3,9 @@ import style from "../../Styles/StoreCSS/ItemDetails.module.css";
 import { ContexStore } from "../../ContexStore/ContexStore";
 import "react-toastify/dist/ReactToastify.css";
 import Cookies from "js-cookie";
-import axios from "axios";
+
 import { serverBaseURI } from "../../Utilities/file.config";
+import { getApi } from "../../services";
 
 const ShowSingleItem = ({
   pro_title,
@@ -45,7 +46,7 @@ const ShowSingleItem = ({
     document.body.appendChild(link);
     link.href = `${serverBaseURI}/hariBaba/api/uploads/files/${src}`;
     link.click();
-    axios //update user download
+    getApi //update user download
       .post("/hariBaba/api/senduserData", {
         user_id,
         key: "update_user_download",

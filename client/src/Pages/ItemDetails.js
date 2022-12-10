@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import ShowSingleItem from "../Components/Store/ShowSingleItem";
-import axios from "axios";
+
 import { useParams } from "react-router-dom";
 import { AudioPlayer, VideoPlayer } from "../Components/Store/Source";
 import Nav from "../Components/Nav/Nav";
@@ -10,6 +10,7 @@ import { ContexStore } from "../ContexStore/ContexStore";
 import style from "../Styles/StoreCSS/ShowStoreData.module.css";
 import Card from "../Utilities/Card/Card";
 import { serverBaseURI } from "../Utilities/file.config";
+import { getApi } from "../services";
 
 const ItemDetails = () => {
   const { userData, apiData } = useContext(ContexStore);
@@ -68,7 +69,7 @@ const ItemDetails = () => {
     }
   };
   const countViews = async (id) => {
-    await axios.post("/hariBaba/api/views", {
+    await getApi.post("/hariBaba/api/views", {
       id,
     });
   };
@@ -81,7 +82,7 @@ const ItemDetails = () => {
   const [notFound, setnotFound] = useState("have");
 
   const getCatTit = async () => {
-    await axios
+    await getApi
       .post("/hariBaba/api/showspecific", {
         id,
         type,

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import AdminLoginStyle from "../AdminCSS/AdminLogin.module.css";
 import { toast } from "react-toastify";
@@ -7,11 +6,12 @@ import Footer from "../../Utilities/StaticContents/Footer";
 import AdminNav from "../AdminComponents/AdminNav";
 import { useHistory } from "react-router-dom";
 import { serverBaseURI } from "../../Utilities/file.config";
+import { getApi } from "../../services";
 const Comingsoon = () => {
   const [adminBanner, setadminBanner] = useState([]);
   const history = useHistory();
   useEffect(() => {
-    axios.get("/hariBaba/api/admin/getbanner").then((response) => {
+    getApi.get("/hariBaba/api/admin/getbanner").then((response) => {
       setadminBanner(response.data);
     });
   }, []);
@@ -51,7 +51,7 @@ const Comingsoon = () => {
       formData.append("addbanner", "adding");
       formData.append("extrakey", "banneroperation");
 
-      await axios
+      await getApi
         .post("/hariBaba/api/admin/addbanner", formData, {
           headers: {
             "content-Type": "multipart/form-data",
@@ -73,7 +73,7 @@ const Comingsoon = () => {
       setloading(true);
       const formDataVideo = new FormData();
       formDataVideo.append("videofile", videoHolder);
-      await axios
+      await getApi
         .post("/hariBaba/api/admin/addbanner", formDataVideo, {
           headers: {
             "content-Type": "multipart/form-data",
@@ -99,7 +99,7 @@ const Comingsoon = () => {
       formDataAds.append("imgData", multipleAds);
       formDataAds.append("inpDatatMulAds", inpDatatMulAds);
       console.log(multipleAds);
-      await axios
+      await getApi
         .post("/hariBaba/api/img/uploadmultipleAds", formDataAds, {
           headers: {
             "content-Type": "multipart/form-data",
@@ -115,7 +115,7 @@ const Comingsoon = () => {
   };
   const deletebanner = async (id, banner_img) => {
     if (window.confirm("Do you want to delete")) {
-      axios
+      getApi
         .post("/hariBaba/api/admin/addbanner", {
           id,
           addbanner: "deleting",

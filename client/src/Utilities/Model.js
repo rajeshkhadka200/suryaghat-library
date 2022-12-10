@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import model from "./model.module.css";
 import TextField from "../../node_modules/@material-ui/core/TextField";
-import axios from "axios";
+import { getApi } from "../services";
 
 const Model = ({ close, initialItem }) => {
   const [updateItem, setUpdateItem] = useState(initialItem);
@@ -21,7 +21,7 @@ const Model = ({ close, initialItem }) => {
   };
 
   const editItem = async () => {
-    await axios
+    await getApi
       .post("/hariBaba/api/editall", {
         pro_id,
         pro_title,
@@ -47,7 +47,7 @@ const Model = ({ close, initialItem }) => {
         <div className={model.modal_content}>
           <span className={model.close} onClick={close}>
             &times;
-          </span> 
+          </span>
           <span className={model.heading}>Edit the details here</span>
           <div className={model.mainWrapper}>
             <div className={model.formControl}>

@@ -1,4 +1,3 @@
-import axios from "axios";
 import AdminLoginStyle from "../AdminCSS/AdminLogin.module.css";
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,12 +5,13 @@ import "react-toastify/dist/ReactToastify.css";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Utilities/StaticContents/Footer";
 import { useHistory, useParams } from "react-router-dom";
+import { getApi } from "../../services";
 const ActivationAdmin = () => {
   const history = useHistory();
   const { queryString } = useParams();
   useEffect(() => {
     const verifyQuery = async () => {
-      await axios
+      await getApi
         .get(`/hariBaba/api/admin/verification/${queryString}`)
         .then((res) => {
           console.log(res.data);
@@ -51,7 +51,7 @@ const ActivationAdmin = () => {
     formData.append("username", username);
     formData.append("password", password);
     formData.append("cPassword", cPassword);
-    await axios
+    await getApi
       .post(`/hariBaba/api/admin/activationclick/${queryString}`, formData, {
         headers: {
           "content-Type": "multipart/form-data",

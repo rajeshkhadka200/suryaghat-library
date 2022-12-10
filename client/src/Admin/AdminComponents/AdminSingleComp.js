@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import db from "../../Utilities/firebase.js";
-import axios from "axios";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ContexStore } from "../../ContexStore/ContexStore.js";
 import productCSS from "../AdminCSS/AdminProduct.module.css";
 import { serverBaseURI } from "../../Utilities/file.config.js";
 import { useHistory } from "react-router-dom";
+import { getApi } from "../../services/index.js";
 const AdminSingleComp = ({
   pro_id,
   pro_title,
@@ -32,7 +33,7 @@ const AdminSingleComp = ({
   const history = useHistory();
 
   const deleteProduct = (id, pro_img1, src, google_id, isVerified) => {
-    axios
+    getApi
       .post("/hariBaba/api/deletebyadmin", {
         id,
         pro_img1,
@@ -51,7 +52,7 @@ const AdminSingleComp = ({
 
   //verify
   const verifyproduct = (id, google_id, cat_title, pro_title, pro_img1) => {
-    axios
+    getApi
       .post("/hariBaba/api/verifyproduct", {
         id,
         google_id,
@@ -84,7 +85,7 @@ const AdminSingleComp = ({
   //editor product
   const editorProduct = async (pro_id, keys) => {
     if (window.confirm(`Add to Editor pick ? ID : ${keys + 1}`))
-      await axios
+      await getApi
         .post("/hariBaba/api/verifyeditor", {
           pro_id,
           checkQuery: "firstset",
@@ -100,7 +101,7 @@ const AdminSingleComp = ({
 
   const removeEditor = async (pro_id, keys) => {
     if (window.confirm(`Remove from Pick ? ID ${keys + 1}`)) {
-      await axios
+      await getApi
         .post("/hariBaba/api/verifyeditor", { pro_id, checkQuery: "secondset" })
         .then((res) => {
           alert(`Removed from editor Pick ID:${keys + 1}`);
@@ -139,7 +140,7 @@ const AdminSingleComp = ({
   //send rate to db
   const sendRate = (pro_id, keys) => {
     const rating = rate[keys];
-    axios
+    getApi
       .post("/hariBaba/api/itemrating", {
         rating,
         pro_id,

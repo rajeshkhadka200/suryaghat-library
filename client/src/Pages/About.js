@@ -1,8 +1,8 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import HomeHero from "../Components/Home/HomeHero";
 import Nav from "../Components/Nav/Nav";
 import { VideoPlayer } from "../Components/Store/Source";
+import { getApi } from "../services";
 import { serverBaseURI } from "../Utilities/file.config";
 import Footer from "../Utilities/StaticContents/Footer";
 import Map from "../Utilities/StaticContents/Map";
@@ -13,7 +13,7 @@ const About = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("hariBaba/api/img/getVedio").then((res) => {
+      await getApi.get("hariBaba/api/img/getVedio").then((res) => {
         setVideo(res.data);
       });
     };

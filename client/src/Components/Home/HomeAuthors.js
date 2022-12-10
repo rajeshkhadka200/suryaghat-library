@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import "../../Styles/HomeCSS/HomeAuthor.css";
-import axios from "axios";
+
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { ContexStore } from "../../ContexStore/ContexStore";
+import { getApi } from "../../services";
 const HomeAuthors = () => {
   const { highlight, color } = useContext(ContexStore);
   const [creator, setCreator] = useState([]);
   const [loading, setloading] = useState(true);
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/owner").then((result) => {
+      await getApi.get("/hariBaba/api/owner").then((result) => {
         setCreator(result.data);
         if (result.data !== "") {
           setTimeout(() => {

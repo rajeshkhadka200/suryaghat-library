@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router";
-import axios from "axios";
+
 import style from "../Styles/StoreCSS/ShowStoreData.module.css";
 import Card from "../Utilities/Card/Card";
 import ContentOne from "../Utilities/StaticContents/ContentOne";
 import Nav from "../Components/Nav/Nav";
 import Footer from "../Utilities/StaticContents/Footer";
 import { ContexStore } from "../ContexStore/ContexStore";
+import { getApi } from "../services";
 
 const ShowStoreData = () => {
   const { apiData } = useContext(ContexStore);
@@ -21,7 +22,7 @@ const ShowStoreData = () => {
 
   useEffect(() => {
     const loaded = async () => {
-      axios
+      getApi
         .post("/hariBaba/api/store/sendall", {
           title: title,
           tablename: tablename,

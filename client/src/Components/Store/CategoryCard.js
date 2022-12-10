@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useContext } from "react";
-import axios from "axios";
 import { NavLink } from "react-router-dom";
 import style from "../../Styles/StoreCSS/cateCard.module.css";
 import { ContexStore } from "../../ContexStore/ContexStore";
 import { serverBaseURI } from "../../Utilities/file.config";
+import { getApi } from "../../services";
 const CategoryCard = () => {
   const [fetchcate, setfetchcate] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/getcategory").then((result) => {
+      await getApi.get("/hariBaba/api/getcategory").then((result) => {
         setfetchcate(result.data);
       });
     };

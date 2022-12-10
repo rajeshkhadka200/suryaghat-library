@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useContext } from "react";
 import AdminLoginStyle from "../AdminCSS/AdminLogin.module.css";
 import { v4 as uuidv4 } from "uuid";
@@ -10,6 +9,7 @@ import AdminNav from "../AdminComponents/AdminNav";
 import Footer from "../../Utilities/StaticContents/Footer";
 import { ContexStore } from "../../ContexStore/ContexStore";
 import { serverBaseURI } from "../../Utilities/file.config";
+import { getApi } from "../../services";
 const AddAdmin = () => {
   const serID = process.env.REACT_APP_SERVICE_ID;
   const tempID = process.env.REACT_APP_TEMPLETE_ID;
@@ -33,7 +33,7 @@ const AddAdmin = () => {
   const AddAdmin = async (e) => {
     e.preventDefault();
 
-    await axios
+    await getApi
       .post("/hariBaba/api/admin/addadmin", { email: email, uid: uid })
       .then((response) => {
         if (response.status === 200) {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import AdminLoginStyle from "../AdminCSS/AdminLogin.module.css";
-import axios from "axios";
 import Check from "../AdminComponents/Check";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,6 +8,7 @@ import UserCSS from "../AdminCSS/User.module.css";
 import Card from "../AdminComponents/Card";
 import Skeleton from "react-loading-skeleton";
 import { serverBaseURI } from "../../Utilities/file.config";
+import { getApi } from "../../services";
 
 const AdminProfile = () => {
   const [footer, setfooter] = useState(true);
@@ -30,7 +30,7 @@ const AdminProfile = () => {
   const SendUpdated = async (e) => {
     setloading(true);
     e.preventDefault();
-    await axios
+    await getApi
       .post("/hariBaba/api/admin/changepassword", {
         adminid,
         password,
@@ -63,7 +63,7 @@ const AdminProfile = () => {
   const [alladmin, setalladmin] = useState([]);
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/admin/alladmin").then((response) => {
+      await getApi.get("/hariBaba/api/admin/alladmin").then((response) => {
         setalladmin(response.data);
       });
     };

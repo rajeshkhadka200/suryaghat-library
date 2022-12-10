@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import "./style.css";
@@ -6,6 +5,7 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { serverBaseURI } from "../file.config";
+import { getApi } from "../../services";
 // import Item from "./item";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -20,7 +20,7 @@ const CardSlide = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/img/fetchmulBanner").then((res) => {
+      await getApi.get("/hariBaba/api/img/fetchmulBanner").then((res) => {
         setimagesAds(res.data);
       });
     };
@@ -29,7 +29,7 @@ const CardSlide = () => {
 
   const deleteInnerBanner = async (id, url) => {
     if (window.confirm("Are you sure?")) {
-      await axios
+      await getApi
         .post("/hariBaba/api/img/deleteinnerbanner", { id, url })
         .then((res) => {
           toast.success("Deleted Successfully");

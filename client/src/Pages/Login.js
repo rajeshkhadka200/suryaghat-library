@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useGoogleLogin } from "react-google-login";
-import axios from "axios";
+
 import Cookies from "js-cookie";
 import { Redirect } from "react-router";
 import LoginStyle from "../Styles/ProfileCSS/Login.module.css";
@@ -11,6 +11,7 @@ import MainLoader from "../Utilities/StaticContents/MainLoader";
 import { serverBaseURI } from "../Utilities/file.config";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase";
+import { getApi } from "../services";
 
 const Login = () => {
   const [loading, setloading] = useState(false);
@@ -82,7 +83,7 @@ const Login = () => {
       .auth()
       .signInWithPopup(provider)
       .then(async function (result) {
-        await axios
+        await getApi
           .post("/hariBaba/api/auth", {
             name: result.user.displayName,
             email: result.user.email,

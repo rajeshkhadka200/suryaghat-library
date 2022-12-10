@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../../Styles/HomeCSS/HomeFeatured.css";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
+import { getApi } from "../../services";
 const FeaturedCollection = () => {
   const [category, setcategory] = useState([]);
   useEffect(() => {
     const loadData = async () => {
-      axios.get("/hariBaba/api/getcategory").then((result) => {
+      getApi.get("/hariBaba/api/getcategory").then((result) => {
         setcategory(result.data);
       });
     };

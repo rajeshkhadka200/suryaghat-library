@@ -7,16 +7,17 @@ import SwiperCore, {
   Pagination,
   Autoplay,
 } from "../../../node_modules/swiper/core";
-import axios from "axios";
 import { serverBaseURI } from "../../Utilities/file.config";
+import { getApi } from "../../services";
 SwiperCore.use([Pagination, Autoplay]);
 const HomeSlider = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/admin/getbanner").then((response) => {
+      await getApi.get("/hariBaba/api/admin/getbanner").then((response) => {
         setData(response.data);
       });
+      console.log(data);
     };
     loadData();
   }, []);

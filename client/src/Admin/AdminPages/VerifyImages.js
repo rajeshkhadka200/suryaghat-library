@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useContext } from "react";
 import { ContexStore } from "../../ContexStore/ContexStore";
 import "../AdminCSS/verImg.css";
@@ -8,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { serverBaseURI } from "../../Utilities/file.config";
 import { useHistory } from "react-router-dom";
+import { getApi } from "../../services";
 
 const VerifyImages = () => {
   const { images } = useContext(ContexStore);
@@ -17,7 +17,7 @@ const VerifyImages = () => {
   });
 
   const fireverify = (id, image_name) => {
-    axios
+    getApi
       .post("/hariBaba/api/img/deleteimg", {
         id,
         image_name,
@@ -31,7 +31,7 @@ const VerifyImages = () => {
       });
   };
   const verifyAll = () => {
-    axios
+    getApi
       .post("/hariBaba/api/img/deleteimg", {
         key: "verifyall",
       })
@@ -43,7 +43,7 @@ const VerifyImages = () => {
       });
   };
   const deleteIMG = (id, image_name) => {
-    axios
+    getApi
       .post("/hariBaba/api/img/deleteimg", {
         id,
         image_name,

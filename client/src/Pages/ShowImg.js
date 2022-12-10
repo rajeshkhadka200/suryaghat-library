@@ -5,10 +5,11 @@ import Nav from "../Components/Nav/Nav";
 import "../Styles/StoreCSS/ShowImg.css";
 import { ContexStore } from "../ContexStore/ContexStore";
 import Cookies from "js-cookie";
-import axios from "axios";
+
 import Footer from "../Utilities/StaticContents/Footer";
 import ImagesModel from "../Utilities/StaticContents/ImagesModel";
 import { serverBaseURI } from "../Utilities/file.config";
+import { getApi } from "../services";
 
 const ShowImg = () => {
   const ad_ckk = Cookies.get("__tcphblad__");
@@ -21,7 +22,7 @@ const ShowImg = () => {
   document.title = "Images-" + category;
   const deletePic = (id, image_name) => {
     if (window.confirm("Wants to delete")) {
-      axios
+      getApi
         .post("/hariBaba/api/img/deleteimg", {
           id,
           image_name,

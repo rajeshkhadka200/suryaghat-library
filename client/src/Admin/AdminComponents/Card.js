@@ -1,7 +1,7 @@
-import axios from "axios";
 import React, { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { toast, ToastContainer } from "react-toastify";
+import { getApi } from "../../services";
 import { serverBaseURI } from "../../Utilities/file.config";
 import UserCSS from "../AdminCSS/User.module.css";
 
@@ -13,7 +13,7 @@ const Card = ({ id, username, email, image, is_super, singleImg }) => {
 
   const handleDeleteAdmin = (_id, single) => {
     if (window.confirm(`Do You want to Delete ${username}`)) {
-      axios
+      getApi
         .post("/hariBaba/api/admin/deleteadmin", {
           single,
           _id,

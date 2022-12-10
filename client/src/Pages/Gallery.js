@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "../Styles/StoreCSS/Gallery.css";
 import Nav from "../Components/Nav/Nav";
-import axios from "axios";
+
 import { ContexStore } from "../ContexStore/ContexStore";
 import { NavLink } from "react-router-dom";
 import ContentOne from "../Utilities/StaticContents/ContentOne";
@@ -11,6 +11,7 @@ import Footer from "../Utilities/StaticContents/Footer";
 import Cookies from "js-cookie";
 import MainLoder from "../Utilities/StaticContents/MainLoader";
 import { serverBaseURI } from "../Utilities/file.config";
+import { getApi } from "../services";
 const Gallery = () => {
   document.title = "SuryaGhat Library - Gallery";
   const { userData, images } = useContext(ContexStore);
@@ -42,7 +43,7 @@ const Gallery = () => {
               formData.append("Text", heading);
               formData.append("gid", google_id);
             }
-            axios
+            getApi
               .post("/hariBaba/api/img/multipleimages", formData, {
                 headers: {
                   "Content-Type": "multipart/form-data",

@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { ContexStore } from "../../ContexStore/ContexStore";
-import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import db from "../../Utilities/firebase";
 import "./Inserting.css";
 import ContentOne from "../../Utilities/StaticContents/ContentOne";
 import MainLoader from "../../Utilities/StaticContents/MainLoader";
+import { getApi } from "../../services";
 const Inserting = () => {
   const { userData } = useContext(ContexStore);
 
@@ -154,7 +154,7 @@ const Inserting = () => {
     formData.append("google_id", google_id);
     formData.append("referenceurl", referenceurl);
 
-    await axios
+    await getApi
       .post("/hariBaba/api/uploadItem", formData, {
         headers: {
           "content-Type": "multipart/form-data",

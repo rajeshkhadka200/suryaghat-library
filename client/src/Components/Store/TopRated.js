@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { getApi } from "../../services";
 import style from "../../Styles/StoreCSS/TopRated.module.css";
-import axios from "axios";
 import Card from "../../Utilities/Card/Card";
 const TopRated = () => {
   const [data, setdata] = useState([]);
   const [visible, setvisible] = useState(8);
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/store/topratings").then((result) => {
+      await getApi.get("/hariBaba/api/store/topratings").then((result) => {
         setdata(result.data);
       });
     };

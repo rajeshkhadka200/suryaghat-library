@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import SidenavStyle from "../AdminCSS/AdminSideNav.module.css";
 import { NavLink } from "react-router-dom";
 import { ContexStore } from "../../ContexStore/ContexStore";
-import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import { getApi } from "../../services";
 
 const AdminSideNav = ({ adminLen }) => {
   const { alluser, admin } = useContext(ContexStore);
@@ -12,7 +12,7 @@ const AdminSideNav = ({ adminLen }) => {
 
   useEffect(() => {
     const loadData = async () => {
-      await axios.get("/hariBaba/api/productadmin").then((response) => {
+      await getApi.get("/hariBaba/api/productadmin").then((response) => {
         setapiData(response.data);
       });
     };
