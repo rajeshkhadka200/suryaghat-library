@@ -7,18 +7,18 @@ const Membership = () => {
     {
       image: `${serverBaseURI}/hariBaba/api/uploads/Images/silver.png`,
       name: "Silver",
-      desc: "To achieve the  Silver membership of our Library, contibute at least 5 contents in our website",
+      desc: "To achieve the  Silver membership of our Library, contibute at least 1 contents in our website",
     },
     {
       image: `${serverBaseURI}/hariBaba/api/uploads/Images/gold.png`,
       name: "Gold",
-      desc: "To achieve the  Gold membership of our Library, contibute at least 10 contents in our website",
+      desc: "To achieve the  Gold membership of our Library, contibute at least 3 contents in our website",
     },
-    {
-      image: `${serverBaseURI}/hariBaba/api/uploads/Images/platinum.png`,
-      name: "Platinum",
-      desc: "To achieve the  Platinum membership of our Library, contibute at least 15 contents in our website",
-    },
+    // {
+    //   image: `${serverBaseURI}/hariBaba/api/uploads/Images/platinum.png`,
+    //   name: "Platinum",
+    //   desc: "To achieve the  Platinum membership of our Library, contibute at least 15 contents in our website",
+    // },
   ]);
   return (
     <>
