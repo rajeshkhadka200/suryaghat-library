@@ -133,24 +133,28 @@ const ShowSingleItem = ({
                 onClick={() => {
                   !us_ckk
                     ? setError("Please login to download")
-                    : upload_items <= 1 && u_download >= 10
+                    : upload_items === 0 && u_download >= 10 
+                    ? setError(
+                      "Download count exceed upload at least 1 content to download more"
+                    )
+                    : upload_items <= 1 && u_download >= 20
                     ? setError(
                         "Download count exceed upload more than 1 contents to download more"
                       )
-                    : upload_items <= 5 && u_download >= 15
-                    ? setError(
-                        "Download count exceed upload more than 5 contents to download more"
-                      )
-                    : upload_items <= 10 && u_download >= 20
-                    ? setError(
-                        "Download count exceed upload more than 10 contents to download more"
-                      )
+                    // : upload_items <= 3 && u_download >= 15
+                    // ? setError(
+                    //     "Download count exceed upload more than 5 contents to download more"
+                    //   )
+                    // : upload_items <= 10 && u_download >= 20
+                    // ? setError(
+                    //     "Download count exceed upload more than 10 contents to download more"
+                    //   )
                     : downloadFile(src);
                 }}
               >
                 Download File
               </button>
-              <div style={{ color: "red" }}>{error}</div>
+              <div style={{ color: "red", fontSize: '0.7rem', marginTop: '5px' }}>{error}</div>
             </div>
           </div>
         </div>
