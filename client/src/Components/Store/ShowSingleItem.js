@@ -89,7 +89,7 @@ const ShowSingleItem = ({
             <span>Category : {cat_title}</span>
             <span>language : {lang_title}</span>
             <span>Genre : Story</span>
-            <span>Emotion : {emo_title}</span>
+            <span>Publish Date : {emo_title}</span>
             <span>Last Updated : {publish_date}</span>
             {referenceurl && (
               <span>
