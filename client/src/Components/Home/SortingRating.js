@@ -64,10 +64,9 @@ export const SortingRatingVideo = () => {
   );
 
   //VideoratingFilter
-
   return (
     <>
-      {VideoFilter ? (
+      {VideoFilter && VideoFilter.length > 0 ? (
         <div className={style.exceptWrapper}>
           <div className={style.exceptHeading}>
             <span>Top Rated Videos</span>
@@ -118,7 +117,7 @@ export const SortingRatingAudio = () => {
 
   return (
     <>
-      {AudioFilter ? (
+      {AudioFilter && AudioFilter.length > 0 ? (
         <div className={style.exceptWrapper}>
           <div className={style.exceptHeading}>
             <span>Top Rated Audios</span>
