@@ -265,7 +265,7 @@ const Inserting = () => {
               />
             </div>
             <div className="uploadIndividual">
-              <label>Enter Emotion</label>
+              <label>Enter Publish Date</label>
               <input
                 disabled={loading}
                 name="emotion"
@@ -273,7 +273,7 @@ const Inserting = () => {
                 value={productDetails.emotion}
                 onChange={handleChangeInput}
                 type="text"
-                placeholder="lovely"
+                placeholder="65 AD/ 2000"
               />
             </div>
           </div>
