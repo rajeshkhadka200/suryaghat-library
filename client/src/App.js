@@ -213,7 +213,7 @@ const App = () => {
     }, 10000);
   }
   const [isPopup, setisPopup] = useState(false);
-  const [emotion, setemotion] = useState("normal");
+  const [emotion, setemotion] = useState("happy");
 
   const changeEmo = (props) => {
     setemotion(props);
