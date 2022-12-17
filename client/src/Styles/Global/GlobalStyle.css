@@ -239,6 +239,7 @@ button {
   font-family: var(--headingfamily);
   color: #fff;
   font-weight: 500;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 815px) {
