@@ -85,7 +85,7 @@ const Profile = () => {
                     <SkeletonTheme color={color} highlightColor={highlight}>
                       <Skeleton height={20} width={150} />
                     </SkeletonTheme>
-                  ) : upload_items >= 5 && upload_items <= 10 ? (
+                  ) : upload_items >= 1 && upload_items <= 2 ? (
                     <span
                       style={{
                         display: "flex",
@@ -105,7 +105,7 @@ const Profile = () => {
                         (You got Silver Membership)
                       </span>
                     </span>
-                  ) : upload_items >= 11 && upload_items <= 15 ? (
+                  ) : upload_items >= 3 ? (
                     <span
                       style={{
                         display: "flex",
@@ -125,27 +125,29 @@ const Profile = () => {
                         (You got Gold Membership)
                       </span>
                     </span>
-                  ) : upload_items >= 16 ? (
-                    <span
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContents: "center",
-                      }}
-                    >
-                      {username} &nbsp;
-                      <img
-                        // src="/Images/platinum.png"
-                        src={`${serverBaseURI}/hariBaba/api/uploads/Images/platinum.png`}
-                        alt=""
-                        style={{ width: "30px", height: "30px" }}
-                      />
-                      &nbsp;
-                      <span style={{ fontSize: "15px" }}>
-                        (You got Platinum Membership)
-                      </span>
-                    </span>
-                  ) : (
+                  )
+                  //  : upload_items >= 16 ? (
+                  //   <span
+                  //     style={{
+                  //       display: "flex",
+                  //       alignItems: "center",
+                  //       justifyContents: "center",
+                  //     }}
+                  //   >
+                  //     {username} &nbsp;
+                  //     <img
+                  //       // src="/Images/platinum.png"
+                  //       src={`${serverBaseURI}/hariBaba/api/uploads/Images/platinum.png`}
+                  //       alt=""
+                  //       style={{ width: "30px", height: "30px" }}
+                  //     />
+                  //     &nbsp;
+                  //     <span style={{ fontSize: "15px" }}>
+                  //       (You got Platinum Membership)
+                  //     </span>
+                  //   </span>
+                  // ) 
+                  : (
                     <span>{username} </span>
                   )}
                 </div>
