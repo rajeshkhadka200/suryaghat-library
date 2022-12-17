@@ -43,18 +43,18 @@ const ShowSingleItem = ({
   const { u_download, upload_items, user_id } = userData;
 
   function downloadFile(src) {
-    var link = document.createElement("a");
-    document.body.appendChild(link);
-    link.href = `${serverBaseURI}/hariBaba/api/uploads/files/${src}`;
-    link.click();
     getApi //update user download
-      .post("/hariBaba/api/senduserData", {
-        user_id,
-        key: "update_user_download",
-      })
-      .then((response) => {
-        if (response.status === 200) {
+    .post("/hariBaba/api/senduserData", {
+      user_id,
+      key: "update_user_download",
+    })
+    .then((response) => {
+      if (response.status === 200) {
           console.log("Updated");
+        var link = document.createElement("a");
+        document.body.appendChild(link);
+        link.href = `${serverBaseURI}/hariBaba/api/uploads/files/${src}`;
+        link.click();
         }
       })
       .catch((err) => console.log(err));
@@ -133,17 +133,17 @@ const ShowSingleItem = ({
                 onClick={() => {
                   !us_ckk
                     ? setError("Please login to download")
-                    : upload_items <= 5 && u_download >= 5
+                    : upload_items <= 1 && u_download >= 10
                     ? setError(
-                        "Download count exceed upload more than 5 to download more"
+                        "Download count exceed upload more than 1 contents to download more"
                       )
-                    : upload_items <= 15 && u_download >= 15
+                    : upload_items <= 5 && u_download >= 15
                     ? setError(
-                        "Download count exceed upload more than 10 to download more"
+                        "Download count exceed upload more than 5 contents to download more"
                       )
-                    : upload_items <= 30 && u_download >= 15
+                    : upload_items <= 10 && u_download >= 20
                     ? setError(
-                        "Download count exceed upload more than 30 to download more"
+                        "Download count exceed upload more than 10 contents to download more"
                       )
                     : downloadFile(src);
                 }}
