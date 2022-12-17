@@ -19,6 +19,7 @@ const ShowSingleItem = ({
   referenceurl,
   pro_rating,
   src,
+  genre_title
 }) => {
   const [visible, setvisible] = useState(170);
   const [copied, setCopied] = useState(false);
@@ -88,7 +89,7 @@ const ShowSingleItem = ({
           <div className={style.itemOthers}>
             <span>Category : {cat_title}</span>
             <span>language : {lang_title}</span>
-            <span>Genre : Story</span>
+            <span>Genre : {genre_title}</span>
             <span>Publish Date : {emo_title}</span>
             <span>Last Updated : {publish_date}</span>
             {referenceurl && (

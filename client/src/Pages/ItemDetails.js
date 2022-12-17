@@ -110,6 +110,7 @@ const ItemDetails = () => {
     src,
     publish_date,
     referenceurl,
+    genre_title
   } = singleData;
   const otherrelatedItem = apiData.filter(
     (data) =>
@@ -144,6 +145,7 @@ const ItemDetails = () => {
             pro_rating={pro_rating}
             src={src}
             publish_date={publish_date}
+            genre_title={genre_title}
           />
           {width > 800 && (
             <>
