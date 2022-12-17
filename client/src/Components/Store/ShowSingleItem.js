@@ -63,6 +63,9 @@ const ShowSingleItem = ({
   const IncVisible = () => {
     setvisible(10000);
   };
+  const desVisible = () => {
+    setvisible(170);
+  };
   return (
     <>
       <div className={style.itemWrapper}>
@@ -108,13 +111,21 @@ const ShowSingleItem = ({
               {pro_desc === undefined
                 ? pro_desc
                 : pro_desc.substring(0, visible)}
-              {visible < 175 ? "..." : ""}
+              {visible < 175 ? "  ..." : ""}
               {visible < 175 ? (
+                <>
+                <br />
                 <span onClick={IncVisible} className={style.showMore}>
-                  &nbsp; Show more
+                  Show more
                 </span>
+                </>
               ) : (
-                ""
+                <>
+                <br />
+                <span onClick={desVisible} className={style.showMore}>
+                  Show less
+                </span>
+                </>
               )}
             </p>
             <div className={style.othersDetails}>
