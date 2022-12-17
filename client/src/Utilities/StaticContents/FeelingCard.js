@@ -14,15 +14,15 @@ const FeelingCard = ({ setisPopup, changeEmo }) => {
           <span>
             <i className="far fa-smile"></i>
           </span>
-          Happy
+          Cool
         </li>
 
-        <li onClick={(e) => changeEmo("love")}>
+        {/* <li onClick={(e) => changeEmo("love")}>
           <span>
             <i className="far fa-grin-hearts"></i>
           </span>
           Crazy
-        </li>
+        </li> */}
 
         <li onClick={(e) => changeEmo("normal")}>
           <span>
