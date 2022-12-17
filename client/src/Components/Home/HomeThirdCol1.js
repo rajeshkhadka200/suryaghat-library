@@ -25,10 +25,10 @@ const HomeThirdCol1 = () => {
               </div>
               <div className="homecardDisc">
                 <span className="title">
-                  {`${pro_title.substring(0, 10)}...`}
+                  {`${pro_title && pro_title.length > 25 ? pro_title.substring(0, 25)+" "+'...' : pro_title}`}
                 </span>
                 <span className="Author">
-                  by {`${owner_name.substring(0, 10)}...`}
+                  by {`${owner_name && owner_name.length> 25 ? owner_name.substring(0, 25)+" "+"..." : owner_name}`}
                 </span>
                 <span className="type">
                   <NavLink
