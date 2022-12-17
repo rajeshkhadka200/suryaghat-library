@@ -64,6 +64,7 @@ html {
   --inputfeild: #333;
   --uploadch: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --fshadow: 0.5px 0.5px 10px 0px rgba(0, 0, 0, 0.13);
+  --notificationbg: #ffff
 }
 
 .night {
@@ -95,6 +96,7 @@ html {
   --textareacolor: #d9d9d9;
   --inputfeild: #fff;
   --uploadch: none;
+  --notificationbg: #242526;
 }
 
 .happy {
@@ -106,7 +108,7 @@ html {
   --button: #6f4c5b !important;
   --cmtinput: #f5e8c6;
   --navtext: #6f4c5b !important;
-  --cardbg: #deba9d59;
+  --cardbg: #deba9d91;
   --feelcircle: #9e7777;
   --feelhover: rgba(255, 255, 255, 0.11);
   --feeltext: #000;
@@ -129,6 +131,7 @@ html {
   --textareacolor: #333;
   --inputfeild: #333;
   --fshadow: none;
+  --notificationbg: #deba9d;
 }
 .normal {
   background: #fff;
