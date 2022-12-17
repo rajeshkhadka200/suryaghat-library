@@ -25,7 +25,7 @@ const About = () => {
       <HomeHero />
       <Membership />
       <Map />
-      {video.slice(0, 1).map((data, key) => {
+      {video && video.length > 0 ? video.slice(0, 1).map((data, key) => {
         return (
           <VideoPlayer
             src={`${serverBaseURI}/hariBaba/api/uploads/AdminSRC/${data.video}`}
@@ -33,7 +33,7 @@ const About = () => {
             id="aboutVideo"
           />
         );
-      })}
+      }): ''}
       <Footer />
     </>
   );
