@@ -15,7 +15,7 @@ const HomeAuthors = () => {
         if (result.data !== "") {
           setTimeout(() => {
             setloading(false);
-          }, 1500);
+          }, 1000);
         }
       });
     };

@@ -19,7 +19,7 @@ export const SortingRatingDocument = () => {
   // DocumentRatingFilter
 
   return (
-    <div>
+    <>
       <div className={style.exceptWrapper}>
         <div className={style.exceptHeading}>
           <span>Top Rated Documents</span>
@@ -50,7 +50,7 @@ export const SortingRatingDocument = () => {
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

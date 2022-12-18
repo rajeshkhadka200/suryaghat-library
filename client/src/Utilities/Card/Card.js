@@ -33,7 +33,7 @@ const Card = ({ pro_id, img, title, owner, rating, desc, cat_title }) => {
             />
           </div>
           <p className={style.desc}>
-            {desc === undefined ? desc : `${desc.substring(0, 50)}...`}
+            {desc?.length > 50 ? desc.substring(0, 50) + "..." : desc}
           </p>
           <NavLink
             to={`/details/${pro_id}/${cat_title}`}

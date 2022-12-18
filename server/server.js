@@ -13,7 +13,7 @@ app.use(express.static("../client/public"));
 //   express.static(path.join(__dirname, "assets"))
 // );
 
-app.use("/hariBaba/api/uploads", express.static("assets"));
+
 const port = process.env.PORT || 3001; //set port
 app.use(cors()); //cors is used to access the data sent from frontend in backend :)
 app.use(express.json({ extented: false }));

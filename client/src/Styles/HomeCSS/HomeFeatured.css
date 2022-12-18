@@ -1,7 +1,7 @@
 .holderFeatured {
   width: 90%;
-  margin: 0 auto;
-  padding: 70px 0;
+  margin: 50px auto;
+  /* padding: 70px 0; */
 }
 .fTitle {
   font-size: var(--headingsize);
@@ -9,15 +9,15 @@
   color: var(--headingcolor);
 }
 .cardHolder {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 30px 0;
+  margin: 20px 0;
+  border-radius: 5px;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .fCard {
-  margin: 20px 20px;
   display: flex;
-  width: 250px;
   padding: 20px;
   background: var(--cardbg);
   box-shadow: var(--fshadow);
@@ -44,7 +44,7 @@
   display: inline-block;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .holderFeatured {
     width: 100%;
     padding: 24px 0;
@@ -70,10 +70,10 @@
   .cardHolder {
     justify-content: center;
   }
-}
-@media screen and (max-width: 550px) {
+} */
+/* @media screen and (max-width: 550px) {
   .fCard {
     width: 100% !important;
     color: rgba(240, 233, 233, 0.13);
   }
-}
+} */

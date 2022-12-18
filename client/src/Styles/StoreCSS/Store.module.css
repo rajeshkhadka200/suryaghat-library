@@ -6,12 +6,11 @@
 }
 
 .mainWrapper {
+  margin: 50px auto;
   width: 90%;
-  margin: 20px auto;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  padding-bottom: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .seemore {
@@ -46,7 +45,7 @@
 }
 
 .search_3 {
-  background: #fafafa;
+  /* background: #fafafa; */
   border: 0;
   border-bottom: 1px solid #fff;
   border-right: 1px solid rgba(255, 255, 255, 0.8);

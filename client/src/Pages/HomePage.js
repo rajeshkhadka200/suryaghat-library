@@ -63,7 +63,7 @@ const HomePage = (props) => {
       <SortingRatingVideo />
       <SortingRatingAudio />
       <FeaturedCollection />
-      <HomeSmallData />
+      {/* <HomeSmallData /> */}
       <Footer />
     </>
   );

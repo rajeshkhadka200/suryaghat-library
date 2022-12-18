@@ -156,3 +156,8 @@
     margin: 20px 0;
   }
 }
+
+.btn {
+  display: flex;
+  gap: 10px;
+}
