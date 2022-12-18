@@ -70,7 +70,12 @@
 }
 
 /*Extra Large Devices*/
-@media (min-width: 1800px) {
+/* @media (min-width: 1800px) {
+  .left_side {
+    flex-basis: 100%;
+  }
+} */
+@media (max-width: 1129px) {
   .left_side {
     flex-basis: 100%;
   }

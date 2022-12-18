@@ -8,6 +8,13 @@
   border-bottom-left-radius: 153px;
   border-bottom-right-radius: 153px;
 }
+@media (max-width: 1129px) {
+  /*responsive for First section */
+  .hero_content {
+    justify-content: center;
+    width: 85%;
+  }
+}
 @media (max-width: 768px) {
   /*responsive for First section */
   .hero_content {

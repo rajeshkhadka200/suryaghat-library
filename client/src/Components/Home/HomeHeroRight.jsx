@@ -9,13 +9,25 @@ const HomeHeroRight = () => {
   setTimeout(() => {
     setloading(false);
   }, 1500);
-  var random = [];
-  while (random.length < 4) {
-    var r = Math.floor(Math.random() * apiData.length);
-    if (random.indexOf(r) === -1) {
-      random.push(r);
+  // var random = [];
+  // while (random.length < 4) {
+    // var r = Math.floor(Math.random() * apiData.length);
+    // if (random.indexOf(r) === -1) {
+    //   random.push(r);
+    // }
+  // }
+  
+  let random = [];
+
+    for (let index = 0; index < 4; index++) {
+      var r = Math.floor(Math.random() * apiData.length);
+      if (random.indexOf(r) === -1) {
+        random.push(r);
+      } else {
+        random.push(Math.floor(Math.random() * apiData.length))
+      }
     }
-  }
+
   return (
     <>
       <div className="right_side">
@@ -78,7 +90,7 @@ const HomeHeroRight = () => {
                 width="130"
                 height="200"
                 src={`${serverBaseURI}/hariBaba/api/uploads/upload/${
-                  apiData[random[0]].pro_img1
+                  apiData[random[3]].pro_img1
                 }`}
                 alt="Loading"
               />
