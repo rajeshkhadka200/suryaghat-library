@@ -137,7 +137,7 @@ const ShowSingleItem = ({
                     ? setError(
                       "Download count exceed upload at least 1 content to download more"
                     )
-                    : upload_items <= 1 && u_download >= 20
+                    : upload_items <= 3 && u_download >= 20
                     ? setError(
                         "Download count exceed upload more than 1 contents to download more"
                       )
