@@ -10,6 +10,7 @@ const {
   getBanner,
   verification,
   activation,
+  addCreators,
 } = require("../Controllers/AdminController");
 AdminRoute.post("/admin/adminauth", AdminAuth);
 AdminRoute.post("/admin/changepassword", changePassword);
@@ -21,5 +22,6 @@ AdminRoute.post("/admin/addbanner", addbanner);
 AdminRoute.get("/admin/getbanner", getBanner);
 AdminRoute.get("/admin/verification/:token", verification); //verify token
 AdminRoute.post("/admin/activationclick/:queryString", activation); //save data after link is clicked
+AdminRoute.post("/admin/addcreators", addCreators);
 
 module.exports = AdminRoute;

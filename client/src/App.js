@@ -9,6 +9,7 @@ import AdminProfile from "./Admin/AdminPages/AdminProfile";
 import PopupFeels from "./Utilities/PopupFeels";
 import FeelingCard from "./Utilities/StaticContents/FeelingCard";
 import AdminSearch from "./Admin/AdminPages/AdminSearch";
+import AddCreators from "./Admin/AdminPages/AddCreators";
 
 const HomePage = Loadable({
   loader: () => import("./Pages/HomePage"),
@@ -328,6 +329,11 @@ const App = () => {
                 exact
                 path="/route/haribabalibrary/admin/dashboard/search"
                 component={AdminSearch}
+              />
+              <Route
+                exact
+                path="/route/haribabalibrary/admin/dashboard/creators"
+                component={AddCreators}
               />
               <Route
                 exact

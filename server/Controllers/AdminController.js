@@ -279,6 +279,31 @@ const sendAdminData = async (req, res) => {
     }
   });
 };
+
+const addCreators = (req, res) => {
+  const file = req.files.file;
+  const {name, description} = req.body
+  const filename = new Date().getTime() + file.name;
+  console.log(file, "@@");
+  console.log(name, "@@");
+
+  db.query(
+    "INSERT INTO owner (owner_name,owner_desc,owner_img) VALUES(?,?,?) ",
+    [name, description, filename],
+    async (err, result) => {
+      if (err) {
+        throw err;
+      } else {
+        file.mv("assets/owners/" + filename);
+        res.status(200).json({
+          message: "Owner inserted",
+          result: result
+        });
+      }
+    }
+  );
+}
+
 //add banner..
 const addbanner = async (req, res) => {
   const { extrakey } = req.body;
@@ -363,4 +388,5 @@ module.exports = {
   getBanner,
   verification,
   activation,
+  addCreators
 };
