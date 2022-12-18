@@ -8,10 +8,10 @@ require("dotenv").config();
 const app = express();
 // db();
 app.use(express.static("../client/public"));
-// app.use(
-//   "/hariBaba/api/uploads",
-//   express.static(path.join(__dirname, "assets"))
-// );
+app.use(
+  "/hariBaba/api/uploads",
+  express.static(path.join(__dirname, "assets"))
+);
 
 
 const port = process.env.PORT || 3001; //set port
