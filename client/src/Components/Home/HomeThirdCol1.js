@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 import { ContexStore } from "../../ContexStore/ContexStore";
 import { serverBaseURI } from "../../Utilities/file.config";
 const HomeThirdCol1 = () => {
+  const history = useHistory()
   const { apiData } = useContext(ContexStore);
   const filterededitor = apiData.filter((data) => data.iseditor === 1);
   const ggg = filterededitor.sort((a, b) => b.editortime - a.editortime);
@@ -15,7 +16,7 @@ const HomeThirdCol1 = () => {
         {ggg.slice(0, 3).map((data, key) => {
           const { pro_title, owner_name, cat_title, pro_img1, pro_id } = data;
           return (
-            <div key={key} className="home3_card">
+            <div key={key} className="home3_card" onClick={()=> history.push(`/details/${pro_id}/${cat_title}`)}>
               <div className="card_img_holder">
                 {/* <img src={`/upload/${pro_img1}`} alt="Not Found" /> */}
                 <img
