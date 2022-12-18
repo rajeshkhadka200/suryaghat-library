@@ -30,7 +30,9 @@ const HomeAuthors = () => {
           {creator.map((data) => {
             const { owner_name, owner_img, owner_id } = data;
             return !loading ? (
-              <div key={owner_id} className="item cardtopCollection ">
+              <div key={owner_id} className="item cardtopCollection " style={{
+                textAlign: 'center'
+              }}>
                 <div className="topcllectioncardImg">
                   <img src={owner_img} alt="Hero" />
                 </div>
