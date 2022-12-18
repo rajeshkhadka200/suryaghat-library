@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { ContexStore } from "../../ContexStore/ContexStore";
 import { getApi } from "../../services";
 import { serverBaseURI } from "../../Utilities/file.config";
 const HomeThirdCol2 = () => {
   const { newRelease, setnewRelease } = useContext(ContexStore);
+  const history = useHistory()
   useEffect(() => {
     const loadData = async () => {
       await getApi
@@ -21,7 +22,7 @@ const HomeThirdCol2 = () => {
         {newRelease.slice(0, 3).map((data, key) => {
           const { pro_id, pro_title, owner_name, pro_img1, cat_title } = data;
           return (
-            <div key={key} className="home3_card">
+            <div key={key} className="home3_card" onClick={()=> history.push(`/details/${pro_id}/${cat_title}`)}>
               <div className="card_img_holder">
                 {/* <img src={`/upload/${pro_img1}`} alt="Not Found" /> */}
                 <img
