@@ -89,8 +89,8 @@ const ContentOne = ({
               </>
             ) : (
               <>
-                <span className={style.itemDynamic}>{itemLen}</span>+ Items
-                Found in &nbsp;
+                <span className={style.itemDynamic}>{itemLen}</span> Items Found
+                in &nbsp;
                 <span className={style.itemDynamic}>{itemName}</span>
               </>
             )}

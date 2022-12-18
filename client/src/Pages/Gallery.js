@@ -138,10 +138,9 @@ const Gallery = () => {
             >
               <NavLink className="cat_title" to={`/store/gallery/${img_cate}`}>
                 <p className="h4">
-                  {img_cate !== undefined
-                    ? img_cate.substring(0, 10)
+                  {img_cate?.length > 50
+                    ? img_cate.substring(0, 50) + "..."
                     : img_cate}
-                  ..
                 </p>
               </NavLink>
             </div>

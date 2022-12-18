@@ -15,7 +15,7 @@ const StorePage = () => {
       <Nav />
       <CardSlide />
       <Headings />
-      {isFooter && <Footer />}
+      <Footer />
     </>
   );
 };

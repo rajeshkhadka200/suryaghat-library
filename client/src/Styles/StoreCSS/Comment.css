@@ -27,7 +27,8 @@
 .cmt_wrapper form button,
 .cmt_wrapper .form button {
   background: var(--button);
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 0 10px;
   color: #fff;
 }

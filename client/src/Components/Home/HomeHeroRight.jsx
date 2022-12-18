@@ -9,13 +9,18 @@ const HomeHeroRight = () => {
   setTimeout(() => {
     setloading(false);
   }, 1500);
-  var random = [];
-  while (random.length < 4) {
-    var r = Math.floor(Math.random() * apiData.length);
-    if (random.indexOf(r) === -1) {
-      random.push(r);
+
+  // number should not be repeated
+
+  const random = [];
+  for (let i = 0; i <= 5; i++) {
+    // number should not be repeated
+    let num = Math.floor(Math.random() * apiData.length);
+    if (random.indexOf(num) === -1) {
+      random.push(num);
     }
   }
+
   return (
     <>
       <div className="right_side">
@@ -30,9 +35,8 @@ const HomeHeroRight = () => {
                 width="130"
                 height="200"
                 src={`${serverBaseURI}/hariBaba/api/uploads/upload/${
-                  apiData[random[0]].pro_img1
+                  apiData[random[0]]?.pro_img1
                 }`}
-                // src={`/upload/${apiData[random[0]].pro_img1}`}
                 alt="about us"
               />
             )}
@@ -47,7 +51,7 @@ const HomeHeroRight = () => {
                 width="130"
                 height="200"
                 src={`${serverBaseURI}/hariBaba/api/uploads/upload/${
-                  apiData[random[1]].pro_img1
+                  apiData[random[1]]?.pro_img1
                 }`}
                 alt="not found"
               />
@@ -62,7 +66,7 @@ const HomeHeroRight = () => {
                 width="130"
                 height="200"
                 src={`${serverBaseURI}/hariBaba/api/uploads/upload/${
-                  apiData[random[2]].pro_img1
+                  apiData[random[2]]?.pro_img1
                 }`}
                 alt="Loading"
               />
@@ -78,7 +82,7 @@ const HomeHeroRight = () => {
                 width="130"
                 height="200"
                 src={`${serverBaseURI}/hariBaba/api/uploads/upload/${
-                  apiData[random[0]].pro_img1
+                  apiData[random[3]]?.pro_img1
                 }`}
                 alt="Loading"
               />
@@ -91,7 +95,7 @@ const HomeHeroRight = () => {
               <img
                 width="130"
                 height="200"
-                src={`${serverBaseURI}/hariBaba/api/uploads/upload/${apiData[3].pro_img1}`}
+                src={`${serverBaseURI}/hariBaba/api/uploads/upload/${apiData[3]?.pro_img1}`}
                 alt="loading"
               />
             )}

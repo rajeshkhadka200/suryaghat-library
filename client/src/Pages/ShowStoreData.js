@@ -16,6 +16,7 @@ const ShowStoreData = () => {
     setisFooter(true);
   }, 2000);
   const { title, tablename } = useParams();
+
   const [error, seterror] = useState("");
   const [data, setdata] = useState([]);
   document.title = "SuryaGhat Library - " + title;
@@ -33,7 +34,7 @@ const ShowStoreData = () => {
         })
         .catch((err) => {
           if (err.response) {
-            seterror("Data not found");
+            seterror(`Sorry, we don't have any ${title} yet.`);
           }
         });
     };
@@ -49,7 +50,9 @@ const ShowStoreData = () => {
   let naya = [];
   for (let i = 1; i <= 4; i++) {
     const random = Math.floor(Math.random() * thisExcept.length);
+    // if (naya.indexOf(random) === -1) {
     naya.push(thisExcept[random]);
+    // }
   }
 
   return (
@@ -116,7 +119,7 @@ const ShowStoreData = () => {
           </div>
         </div>
       )}
-      {isFooter && <Footer />}
+      <Footer />
     </>
   );
 };

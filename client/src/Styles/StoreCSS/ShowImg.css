@@ -1,5 +1,5 @@
 .show_heading {
-  width: 85%;
+  width: 90%;
   margin: 40px auto;
 }
 .show_heading span {
@@ -10,7 +10,7 @@
   width: 100%;
   display: grid;
   grid-auto-rows: 250px;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 350px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 30px auto;
   grid-gap: 20px;
   justify-content: center;
@@ -18,15 +18,20 @@
 .dltHolder {
   height: 100%;
   width: 100%;
-  background: rgba(51, 51, 51, 0.418);
+  background: rgba(51, 51, 51, 0.76);
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   border-radius: 10px;
 }
+
 .img_con__:hover .dltHolder {
   visibility: visible;
+  color: #fff;
+}
+.fa-trash-alt:hover {
+  color: rgba(255, 0, 0, 0.7);
 }
 .img_con__ {
   border-radius: 10px;

@@ -21,7 +21,7 @@ const ShowImg = () => {
   });
   document.title = "Images-" + category;
   const deletePic = (id, image_name) => {
-    if (window.confirm("Wants to delete")) {
+    if (window.confirm("Are you sure to delete this image?")) {
       getApi
         .post("/hariBaba/api/img/deleteimg", {
           id,

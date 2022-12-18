@@ -1,9 +1,9 @@
 .ShowDataholder {
   width: 90%;
-  margin: 0px auto 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  margin: 20px auto 50px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .smallIndi {
   width: 84%;
@@ -12,6 +12,7 @@
   justify-content: flex-end;
   align-items: center;
   text-transform: capitalize;
+  color: var(--headingcolor);
 }
 
 .error {
@@ -26,17 +27,16 @@
 
 .exceptWrapper {
   width: 90%;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 .holder {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 0;
   margin: 20px 0;
-  background: var(--browsebg);
   border-radius: 5px;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* background: var(--browsebg); */
 }
 .exceptWrapper span {
   font-size: var(--headingsize);
@@ -46,17 +46,17 @@
 }
 
 @media screen and (max-width: 869px) {
-  .holder {
+  /* .holder {
     justify-content: center;
   }
   .ShowDataholder {
     justify-content: center;
-  }
+  } */
 }
 @media screen and (max-width: 780px) {
-  .ShowDataholder {
+  /* .ShowDataholder {
     width: 95%;
-  }
+  } */
 }
 #exceptWrapper {
   background: transparent !important;

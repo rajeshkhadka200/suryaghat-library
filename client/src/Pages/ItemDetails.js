@@ -110,7 +110,7 @@ const ItemDetails = () => {
     src,
     publish_date,
     referenceurl,
-    genre_title
+    genre_title,
   } = singleData;
   const otherrelatedItem = apiData.filter(
     (data) =>
@@ -122,7 +122,7 @@ const ItemDetails = () => {
   const [message, setMessage] = useState("");
   const showError = () => {
     setTimeout(() => {
-      setMessage(`It seems Content doesn't exist ;(`);
+      setMessage(`It seems Content doesn't exist`);
     }, 3500);
   };
 
@@ -213,3 +213,4 @@ const ItemDetails = () => {
 };
 
 export default ItemDetails;
+

@@ -17,7 +17,6 @@ const HomeSlider = () => {
       await getApi.get("/hariBaba/api/admin/getbanner").then((response) => {
         setData(response.data);
       });
-      console.log(data);
     };
     loadData();
   }, []);
@@ -45,11 +44,7 @@ const HomeSlider = () => {
                 <SwiperSlide key={key}>
                   <div className={"sliderText"}>
                     <span className={"sliderHeading"}>{heading}</span>
-                    <span className={"sliderdesc"}>
-                      {banner_desc !== undefined
-                        ? banner_desc.substring(0, 100) + "..."
-                        : banner_desc}
-                    </span>
+                    <span className={"sliderdesc"}>{banner_desc}</span>
                   </div>
                   <img
                     className={"img"}
