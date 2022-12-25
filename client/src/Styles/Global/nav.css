@@ -69,7 +69,11 @@ nav ul li p {
   margin-top: 5px;
   display: none;
   letter-spacing: 0.5px;
-  margin-right: 3px;
+  /* margin-right: 3px; */
+}
+
+.nav_links li {
+  text-align: center;
 }
 
 /* ----------- design for Dropdown  search ------------ */

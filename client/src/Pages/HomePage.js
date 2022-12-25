@@ -57,7 +57,7 @@ const HomePage = (props) => {
         />
       )}
       <HomeSlider />
-      <HomeAuthors />
+      {/* <HomeAuthors /> */}
       <HomeThirdSection />
       <SortingRatingDocument />
       <SortingRatingVideo />
