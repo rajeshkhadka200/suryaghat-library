@@ -34,7 +34,8 @@
 /* search box*/
 
 #search_form_3 {
-  background: #e1e1e1; /* Fallback color for non-css3 browsers */
+  background: var(--notificationbg); 
+  /* background: #e1e1e1;  */
   width: 80%;
   margin: 10px auto;
   padding: 5px;

@@ -13,8 +13,8 @@
 .modelInfoWrapper .actualModel {
   width: 520px;
   min-height: fit-content;
-  background: var(--cardbg);
-  /*background: var(--browsebg);*/
+  background: var(--notificationbg);
+  /* background: var(--browsebg); */
   border: 1px solid var(--cardborder);
   padding: 15px 15px;
   border-radius: 5px;
