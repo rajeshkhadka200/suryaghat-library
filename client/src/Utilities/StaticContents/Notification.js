@@ -4,6 +4,7 @@ import db from "../firebase";
 import "./Notification.css";
 import Cookies from "js-cookie";
 import { NavLink, useHistory } from "react-router-dom";
+import { serverBaseURI } from "../file.config";
 
 const Notification = () => {
   const history = useHistory();
@@ -54,7 +55,7 @@ const Notification = () => {
                 className="_single_notif"
               >
                 <div className="_notif_left_">
-                  <img src={`/upload/${pro_img}`} alt={"verify__"} />
+                  <img src={`${serverBaseURI}/hariBaba/api/uploads/upload/${pro_img}`} alt={"verify__"} />
                 </div>
                 <div className="_notif_right_">
                   <span>{admin_name}</span> verified your uploaded{" "}
